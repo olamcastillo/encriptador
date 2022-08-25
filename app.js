@@ -58,7 +58,7 @@ function encrypt() {
         let strO = strA.replaceAll('o', 'ober');
         let strU = strO.replaceAll('u', 'ufat');
         answer.value = strU;
-        answer.style.fontSize = '32px';
+        answer.style.fontSize = '26px';
         answer.style.transition = '.4s';
         noData.style.opacity = '0';
         noData.style.transition = '.4s';
@@ -74,7 +74,7 @@ function decrypt() {
         let strO = strA.replaceAll('ober', 'o');
         let strU = strO.replaceAll('ufat', 'u')
         answer.value = strU;
-        answer.style.fontSize = '32px';
+        answer.style.fontSize = '26px';
         answer.style.transition = '.4s';
         noData.style.opacity = '0';
         noData.style.transition = '.4s';
