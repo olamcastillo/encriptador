@@ -16,27 +16,32 @@
         </div>
     </header>
     <main>
-        <div class="input">
-            <input type="text" required>
+        <div class="textarea">
+            <textarea onkeypress="autoGrow(this); return (event.charCode >= 97 && event.charCode <= 122);" onkeyup="autoGrow(this);" required name="textarea" id="textarea"
+            required autocomplete="off" min="1"></textarea>
             <span>Enter text</span>
         </div>
         <div class="notice">
-            <i class="material-icons">new_releases</i>
+            <i  class="material-icons">new_releases</i>
             <p>Only lowercase letters and no accents</p>
         </div>
         <div class="buttons">
-            <button onclick="encripter()" class="encript">Encrypt</button>
-            <button onclick="dencripter()" class="dencript">Decrypt</button>
+            <button onclick="validEncrypt()" class="encript">Encrypt</button>
+            <button onclick="validDecrypt()" class="dencript">Decrypt</button>
         </div>
         <div class="card">
-            <p class="card-answer">answers</p>
-            <img class="card-img" src="/images/No data-amico.svg" alt="no-data">
-            <h2 class="alert-title">No mesage found!</h2>
-            <p class="alert-p">Enter the text to be encrypted or decrypted</p>
+            <textarea onmousedown = 'return false' onselectstart = 'return false' class="textarea-answer" id="textarea-answer"></textarea>
+            <div id="no-data">
+                <img class="card-img" src="/images/No data-amico.svg" alt="no-data">
+                <h2 class="alert-title">No mesage found!</h2>
+                <p class="alert-p">Enter the text to be encrypted or decrypted</p>
+            </div>
+            <div>
+                <button onclick="copyText()" id="copy">Copy</button>
+            </div>
         </div>
-
     </main>
 </body>
 <script src="/app.js"></script>
-<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </html>
